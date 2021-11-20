@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:audioplayers/audioplayers.dart';
+//import 'package:audioplayers/audioplayers.dart';
 // import 'package:path_provider/path_provider.dart';
 // import 'dart:io';
 // import 'dart:async';
@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
     'salut',
     'salut (Germana)',
     'multumesc',
-    'mutlumesc(Germana)',
+    'multumesc(Germana)',
     'caine',
     'caine(Germana)',
     'tricou',
@@ -42,21 +42,21 @@ class _HomePageState extends State<HomePage> {
 
   List<String> audio_files = [
     'salut.mp3',
-    'hallo.mp3'
-        'danke.mp3',
+    'hallo.mp3',
+    'danke.mp3',
     'multumesc.mp3',
     'caine.mp3',
     'hund.mp3',
     'tricou.mp3',
     't-shirt.mp3'
   ];
-
+  //AudioCache player = AudioCache();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Center(
-          child: Text('Guess my number'),
+          child: Text('Basic phrases'),
         ),
       ),
       body: GridView.builder(
@@ -88,8 +88,8 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             onTap: () {
-              AudioCache player = AudioCache();
-              player.play(audio_files[index]);
+              //AudioCache player = AudioCache();
+              //player.play(audio_files[index]);
             },
           );
         },
