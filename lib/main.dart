@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
     'tricou(Germana)',
   ];
 
-  List<String> audio_files = [
+  List<String> audiofiles = [
     'salut.mp3',
     'hallo.mp3',
     'danke.mp3',
@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: GridView.builder(
         padding: const EdgeInsets.all(16.0),
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           mainAxisSpacing: 32,
           crossAxisSpacing: 32,
@@ -73,7 +73,7 @@ class _HomePageState extends State<HomePage> {
               child: Center(
                 child: Text(
                   quotes[index],
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
@@ -84,12 +84,12 @@ class _HomePageState extends State<HomePage> {
               decoration: BoxDecoration(
                   color: Colors.blue,
                   border: Border.all(width: 1, color: Colors.blue),
-                  borderRadius: const BorderRadius.all(const Radius.circular(16))
+                  borderRadius: const BorderRadius.all(Radius.circular(16))
               ),
             ),
             onTap: () {
               //AudioCache player = AudioCache();
-              //player.play(audio_files[index]);
+              //player.play(audiofiles[index]);
             },
           );
         },
